@@ -1,10 +1,10 @@
 SHELL=/bin/bash
 CC=g++
-CCFLAGS=-Wall -Wextra -pedantic -g -std=c++11
+CCFLAGS=-Wall -Wextra -pedantic -g -std=c++17
 # LIBS=-lpthread
 
 
-p=3
+p=pointer
 
 all:
 	make clean
