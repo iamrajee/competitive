@@ -4,30 +4,24 @@
 #include<unistd.h>
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 clock_t tStart = clock(); //starting clock
 
-void inputArray(int *x, int n);
-int getFrequency(int *x, int n, int k);
+vector <int> inputArray(int n);
+void getFrequency(int *,vector <int>, int);
 int getMaxposn(int *x, int n);
 int main()
 {
-	int a[100], f[100], i, n;
-	cout << "Enter the no. of intergers in array(n)" << endl;
-	cin >> n;
+	int f[100], n;
+	vector <int> a;
+	a = inputArray(n);
 
-	cout << "Enter array" << endl;
-	for(i=0;i<n;i++){
-		cin >> a[n];
-		// cout << a[n];
+	for(int i=0;i<a.size();i++){
+		cout<<a[i]<<endl;
 	}
-
-	inputArray(a,n);
-
-	// for(i=0; i<n; i++)
-	// { 
-	// 	f[i] = getFrequency(int *x, int n, int k);
-	// }
+	getFrequency(f,a,n);
+	
 
 	// p = getMaxposn(int *x, int n);
 	// printf("%d\n", &a[p]);
@@ -36,11 +30,29 @@ int main()
 	return 0;
 }
 
-void inputArray(int *x, int n){
-	cout << n<<endl;
-	cout << x<<endl;
+vector <int> inputArray(int n){
+	vector <int> a;
+	int x;
+
+	cout << "Enter the no. of intergers in array(n)" << endl;
+	cin >> n;
+
+	cout << "Enter array" << endl;
+	for(int i=0;i<n;i++){
+		cin >> x;
+		a.push_back(x);
+	}
+	return a;
 }
 
+void getFrequency(int *f,vector <int> a, int n){
+	for(int i=0; i<n; i++){
+		cout << "--"<<a[i]<<endl;
+		// for(int j=0; j<n; i++){ 
+			
+		// }
+	}
+}
 
 
 
