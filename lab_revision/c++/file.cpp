@@ -31,8 +31,8 @@ int main(){
         f2<<s2<<endl;
     }
     f2.close();
-//===================================read line============
-    ifstream f3("output.txt");//-----------------open file for append(ios::app)
+//===================================read char============
+    ifstream f3("output.txt");
     if (!f3){
         cout<<"error opening"<<endl;
         return -1;
@@ -44,8 +44,8 @@ int main(){
         }
     }
     f3.close();
-//===================================read char============
-    ifstream f4("output.txt");//-----------------open file for append(ios::app)
+//===================================read line============
+    ifstream f4("output.txt");
     if (!f4){
         cout<<"error opening"<<endl;
         return -1;
