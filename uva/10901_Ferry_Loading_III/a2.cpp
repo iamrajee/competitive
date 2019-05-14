@@ -70,7 +70,7 @@ void funA(){
             Time+=20;
             // state = !state;
             filled = 0;
-            filled++;
+            // filled++;                                                            
             filled_res =0;
         }
         q.pop();
