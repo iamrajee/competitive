@@ -3,7 +3,7 @@ CC=g++
 CCFLAGS=-Wall -Wextra -pedantic -g -std=c++11
 # LIBS=-lpthread
 
-p=a2
+p=a
 
 all:
 	make clean

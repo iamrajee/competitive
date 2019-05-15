@@ -48,7 +48,7 @@ void f(){
             // if(x!=0){
             //     r = centre + (t+1)/2;
             //     c = centre + (t+1)/2-x;
-            // }else{
+            // }else{   
             //     r = centre + (t+1)/2-1;
             //     c = centre + (t+1)/2-1;
             // }

@@ -54,7 +54,7 @@ void R(){
             //     // r = *(++posr);
             //     // cout<<"new_r:"<<r<<endl;
             //     // R();
-            // }
+            // }    
             
         }else{
             // cout<<" r:"<<r+1<<endl;
