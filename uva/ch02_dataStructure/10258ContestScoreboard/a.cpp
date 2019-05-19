@@ -1,14 +1,16 @@
 #include<bits/stdc++.h>
+#include<tuple>
 
 using namespace std;
 int n,i,j,k;
 char c;
 string s;
+int qsum;
 
 // multiset <int,int> cs;
 // multiset <int,int> is;
 // multiset <int,int> os;
-multiset <pair<int,int> > cs;
+set <pair<int,int> > cs;
 multiset <pair<int,int> > is;
 // multiset <int,int,int> rs;
 // multiset <pair<int,int> > os;
@@ -29,6 +31,9 @@ multiset <pair<int,int> >::iterator itr2;
 int id,q,t;
 int qcount,psum;
 pair <int,int> p;
+vector <tuple<int,int,int> > csf;
+vector <tuple<int,int,int> > result;
+vector<tuple<int, int, int> > v;
 void f(){
     
 }
@@ -71,6 +76,7 @@ int main()
                     // cs.insert(p);
                     solvedq.insert(q);
                     solvedid.insert(id);
+                    csf.push_back(make_tuple(id,q,t));
                 }
             }
             getline(cin,s);
@@ -78,22 +84,29 @@ int main()
 
         for (itr3=allid.begin(); itr3!=allid.end(); ++itr3){
             id = *itr3;
+            qsum=0;
+            psum=0;
             if(*solvedid.find(id)==id){//for id solved some q
                 for (itr4=solvedq.begin(); itr4!=solvedq.end(); ++itr4){//combining with all solvedq and if it is in cs
                     q = *itr4;
                     p = {id,q};
                     if(*cs.find(p)==p){ //and if it is in cs
-                        // psum+=
+                        qsum++;
+                        for(j=0;j<csf.size();j++){
+                            if(get<0>(csf[j])==id && get<1>(csf[j])==q){
+                                psum+=get<2>(csf[j]);
+                            }
+                        }
                     }
                 }
-            }else{
-                // rs.insert({*itr3,0,0});
             }
+            result.push_back(make_tuple(id,qsum,psum));
         }
-        // while(!ms.empty()){
-        //     it = ms.find({id,q,'I'};
-
-        // }
+        
+        cout<<"**********result***********"<<endl;
+        for(j=0; j<result.size();j++){
+            cout<<get<0>(result[j])<<" "<<get<1>(result[j])<<" "<<get<2>(result[j])<<endl;
+        }
         cout<<endl;
     }
     return 0;
