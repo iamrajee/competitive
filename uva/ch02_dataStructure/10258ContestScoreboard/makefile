@@ -3,7 +3,7 @@ CC=g++
 CCFLAGS=-Wall -Wextra -pedantic -g -std=c++11
 # LIBS=-lpthread
 
-p=a2
+p=a3
 
 all:
 	make clean
@@ -11,8 +11,8 @@ all:
 clean:
 	rm -f *.out
 run:
-	$(CC) $(p).cpp -o $(p).out
+	$(CC) $(CCFLAGS) $(p).cpp -o $(p).out
 	# ./$(p).out
-	./$(p).out < a.txt 
-	# ./$(p).out < a.txt  > output.txt
+	# ./$(p).out < a.txt 
+	./$(p).out < a.txt  > output.txt
 

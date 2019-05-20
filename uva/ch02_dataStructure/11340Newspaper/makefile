@@ -13,7 +13,7 @@ all:
 clean:
 	rm -f *.out
 run:
-	$(CC) $(p).cpp -o $(p).out
-	./$(p).out < a.txt
-	# ./$(p).out < a.txt  > output.txt
+	$(CC) $(CCFLAGS) $(p).cpp -o $(p).out
+	# ./$(p).out < a.txt
+	./$(p).out < a.txt  > output.txt
 

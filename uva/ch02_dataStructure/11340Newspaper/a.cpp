@@ -12,6 +12,7 @@ int main()
     cin >>n;
     // cout<<n<<endl;
     for(i = 0;i<n;i++){
+        cmap.clear();
         sum = 0;
         cin >>k;
         // cout<<k<<endl;
@@ -23,10 +24,14 @@ int main()
             // cout<<c<<v<<endl;
         }
 
-        // map<char, int>::iterator itr; 
+        // map<char, int>::iterator itr;
+        // cout<<"map:"<<endl;
         // for (itr = cmap.begin(); itr != cmap.end(); ++itr) { 
-        //     cout << '\t' << itr->first 
-        //      << '\t' << itr->second << '\n';
+        //     cout<< itr->first << '\t' << itr->second <<endl;
+        // }
+        // cout<<"map:"<<endl;
+        // for (auto &x: cmap) { 
+        //     cout<< x.first << '\t' << x.second <<endl;
         // }
         // cout << endl;
 
