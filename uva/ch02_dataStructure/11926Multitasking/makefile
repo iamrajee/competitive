@@ -13,6 +13,6 @@ clean:
 run:
 	$(CC) $(CCFLAGS) $(p).cpp -o $(p).out
 	# ./$(p).out
-	./$(p).out < a.txt 
-	# ./$(p).out < a.txt  > output.txt
+	# ./$(p).out < a.txt 
+	./$(p).out < a.txt  > output.txt
 
