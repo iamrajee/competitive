@@ -23,15 +23,10 @@ int main(){
         cout<<"0"<<endl;
     }else{
         if(mn<0){
-            // mx=mx-mn;
-            cout<<max(min(w-mx,w+mn)+1,0)<<endl;
+            cout<<max(min(w-mx+mn,w+mn)+1,0)<<endl;
         }else{
             cout<<max(w-mx+1,0)<<endl;
         }
-        // else(abs(mn)==w){
-// 
-        // }
-        // cout<<max(w-mx+1,0)<<endl;
     }
     return 0;
 }

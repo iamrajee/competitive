@@ -1,16 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int n,m;
-int i,j,k,flag,sum,count;
-int a,b,t;
-char c;
+int n;
 string s;
 int main(){
     cin>>n;
     cin>>s;
-    // for(i=0;i<n;i++){
-    //     cin>>t;
-    // }
+    // cout<<s<<endl;
+    sort(s.begin(),s.end());
+    cout<<s<<endl;
     return 0;
 }
