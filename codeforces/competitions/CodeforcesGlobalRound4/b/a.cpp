@@ -2,12 +2,12 @@
 using namespace std;
 
 int n,m;
-int i,j,k,flag,counter;
-long long int sum;
+int i,j,k,flag;
+long long int sum,counter;
 int a,b,t;
 char c;
 string s;
-vector <int> v;
+vector <long long int> v;
 int main(){
     cin>>s;
     int sz=s.size();
