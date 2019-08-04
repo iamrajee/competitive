@@ -1,47 +1,53 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int n,m;
-int i,j,k,flag,sum;
-long long counter;
-int a,b,t,q,l,L;
-int M = 1000000007;
+int n,m,q,T;
+int i,j,k,flag,counter;
+int a,b,t;
+long long int sum;
 char c;
 string s;
+
 vector <int> v;
-stringstream ss;
+vector <int> v2;
+set <int> st;
+multiset <int> ms;
+map <int,int> mp;
 int main(){
     cin>>s;
-    counter=0;
-    n = (int)s.size();
-    for(i=0;i<n;i++){
-        if(s[i]=='?'){
-            v.push_back(i);
-        }
-    }
-    q=(int)v.size();
-    l=pow(10,q);
-
-    for(i=0;i<l;i++){
-        L=i;
-        for(j=0;j<q;j++){
-            t = L-(L/10)*10;
-            L/=10;
-            s[v[j]] = (char)(t+48);
-            if(stoi(s)%13==5){
-                counter++;
+    n=(int)s.size();
+    v.resize(n,1);
+    v2.resize(n,1);
+    bool notyet=1;
+    while(notyet==1){
+        notyet=0;
+        for(i=0;i<n;i++){
+            if(s[i]=='R'){
+                v[i+1]+=min(1,v[i]);
+            }else{
+                v[i-1]+=min(1,v[i]);
             }
-            // cout<<i<<" "<<t<<endl;
-            // ss<<t;
-            // cout<<ss;
-            // cout<<to_string(t)<<" "<<(char)(t+48)<<endl;
-            // cout<<s[v[j]]<<endl;
-            // cout<<i<<" "<<t<<" "<<stoi(s)<<endl;
-
+            v[i]=max(0,v[i]-1);
+            if(i>0){
+                if(v[i-1]!=v2[i-1]){
+                    notyet=1;
+                    v2[i-1]=v[i-1];
+                }
+            }else{
+                if(v[0]!=v2[0]){
+                    notyet=1;
+                    v2[0]=v[0];
+                }
+            }
             
         }
+        if(v[n-1]!=v2[n-1]){
+            notyet=1;
+            v2[n-1]=v[n-1];
+        }
     }
-    cout<<counter%M<<endl;
-    // cout<<n<<" "<<q<<" "<<l<<endl;
+    for(auto it:v){
+        cout<<it<<" ";
+    }
     return 0;
 }
