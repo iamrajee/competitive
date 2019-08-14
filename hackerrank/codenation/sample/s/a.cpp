@@ -16,10 +16,15 @@ priority_queue <int> pq;
 map <int,int> mp;
 
 int main(){
-    cin>>n;
-    for(i=0;i<n;i++){
-        cin>>t;
-        v.push_back(t);
-    }
+    // cin>>n;
+    // for(i=0;i<n;i++){
+    //     cin>>t;
+    //     v.push_back(t);
+    // }
+    if(std::string("a") < "a")
+        cout<<"Yes";
+    else
+        cout<<"No";
+
     return 0;
 }
