@@ -21,10 +21,10 @@ int main(){
     //     cin>>t;
     //     v.push_back(t);
     // }
-    if(std::string("a") < "a")
-        cout<<"Yes";
-    else
-        cout<<"No";
+    // if(std::string("a") < "a")
+    //     cout<<"Yes";
+    // else
+    //     cout<<"No";
 
     return 0;
 }
