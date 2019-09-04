@@ -6,9 +6,9 @@ vector<bool> vis;
 queue <int> q;
 
 void bfs(int u){
-    if(vis[u]==1){
-        return;    
-    }
+    // if(vis[u]==1){
+    //     return;    
+    // }
     q.push(u);
     vis[u] = 1;
     while(!q.empty()){
@@ -34,6 +34,7 @@ int main(){
 	    adj[v].push_back(u);
     }
     for(int i=0;i<V;i++) //we call on whole graph to deal with unconnected graph
-	    bfs(i);
+        if(vis[i]==0)
+	        bfs(i);
     return 0;
 }
