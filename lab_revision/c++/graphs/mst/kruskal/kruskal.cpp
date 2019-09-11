@@ -32,7 +32,7 @@ void kruskal(){
         v = it.second.second;
         w = it.first;
         edgespq.pop();
-        if(findroot(u) != findroot(v))
+        if(findroot(u) != findroot(v))//i.e disjoint
         {
             wsum += w;
             union1(u,v);
